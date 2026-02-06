@@ -70,7 +70,7 @@ articleSchema.pre('save', function() {
 articleSchema.index({ status: 1 });
 articleSchema.index({ tags: 1 });
 articleSchema.index({ categoryId: 1 });
-articleSchema.index({ slug: 1 });
+// articleSchema.index({ slug: 1 }); // Removed (duplicate of unique: true)
 articleSchema.index({ updatedAt: -1 });
 articleSchema.index({ viewCount: -1 });
 

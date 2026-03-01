@@ -26,7 +26,9 @@ const deflectionSessionSchema = new mongoose.Schema({
     type: Date
   }
 }, {
-  timestamps: true
+  timestamps: true,
+  toJSON: { virtuals: true },
+  toObject: { virtuals: true }
 });
 
 module.exports = mongoose.model('DeflectionSession', deflectionSessionSchema);
